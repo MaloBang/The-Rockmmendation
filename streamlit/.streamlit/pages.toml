@@ -1,0 +1,25 @@
+[[pages]]
+path = "pages/about.py"
+name = "Acceuil"
+icon = "🏠"
+
+[[pages]]
+path = "pages/app.py"
+name = "Application"
+icon = "🍿"
+
+[[pages]]
+path = "pages/KPI.py"
+name = "KPI"
+icon = "📊"
+
+[[pages]]
+path = "pages/contact.py"
+name = "Contact"
+icon = "💌"
+
+[[pages]]
+path = "pages/todo.py"
+name = "Todo"
+icon = "🛠️"
+url_path = "todo.py"

@@ -2,11 +2,10 @@ import streamlit as st
 
 # Import CSS
 
-def local_css(styles):
-    with open(styles) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+def remote_css(url):
+    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
 
-local_css("streamlit\styles.css")
+remote_css("https://github.com/MaloBang/The-Rockmmendation/blob/main/streamlit/styles.css")
 
 st.markdown("""
     <style>

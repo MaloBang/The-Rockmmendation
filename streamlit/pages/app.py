@@ -110,11 +110,10 @@ def info_films(id):
 
 # Import CSS
 
-def local_css(styles):
-    with open(styles) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+def remote_css(url):
+    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
 
-local_css("streamlit\styles.css")
+remote_css("https://github.com/MaloBang/The-Rockmmendation/blob/main/streamlit/styles.css")
 
 # --------------
 
@@ -196,7 +195,7 @@ if choix_film:
         st.write("Aucun film trouvé. Vous pouvez élargir la recherche.")
         
         # Option pour afficher plus de films
-    show_all = st.checkbox("Afficher tous les films")
+    show_all = st.checkbox("Afficher tous les films correspondant à la recherche")
         
     if show_all:
         extended_df = filtered_df.sort_values(by='popularity_x', ascending=False).head(100)
